@@ -1,0 +1,44 @@
+.main {
+    .slide-wrap {
+        margin-top: 20px;
+        padding: 0 10px;
+        .slide-inner {
+            li {
+                overflow: hidden;
+                border-radius: 10px;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+    .visual-menu {
+        margin-top: 20px;
+        padding: 0 20px;
+        .list {
+            & > li {
+                float: left;
+                width: 20%;
+                a {
+                    display: block;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                    }
+                    span {
+                        margin-top: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+    }
+}

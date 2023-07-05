@@ -1,0 +1,62 @@
+$mainClr: rgb(53, 197, 240);
+
+.header {
+    .home {
+        position: relative;
+        border-bottom: 1px solid #EAEDEF;
+        padding: 10px 0;
+        .home-menu-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+        }
+
+        h1.logo {
+            margin: 0 auto;
+            width: 80px;
+            height: 30px;
+            background-color: #ccc;
+        }
+        .utility-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .gnb {
+        overflow-x: auto;
+        border-bottom: 1px solid #EAEDEF;
+        padding: 5px 0;
+        .list {
+            margin: 0 auto;
+            width: 590px;
+
+            li {
+                float: left;
+                a {
+                    display: block;
+                    padding: 10px 10px;
+                }
+                &.active {
+
+                    a {
+                        color: $mainClr;
+
+                    }
+                    
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        }
+    }
+}
