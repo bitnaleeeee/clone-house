@@ -37,7 +37,9 @@ const Header = () => {
       </div>
 
       <nav className="gnb">
-        <ul className="list">
+
+        {/* 동적으로 UL(list)의 넓이를 정해주세요 */}
+        <ul className="list" style={{width: '620px'}}>
           <li className="active">
             <a href="#!">홈</a>
           </li>

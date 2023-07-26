@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 오늘의집 클론코딩
+> 난이도는 5점 만점
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 공통 영역
+### 앱 안내 팝업
+* 앱 안내 팝업을 닫으면(모바일웹으로 볼게요) 24시간 뒤에 해당 팝업이 다시 나오도록 하고, 24시간 안에는 해당 팝업이 안나오도록 해주세요.(3점)
 
-## Available Scripts
+## 헤더 영역
+### 요구사항
+* GNB를 클릭할 때마다 해당 메뉴가 활성화(Active)되도록 해주세요.(1점)
 
-In the project directory, you can run:
+### 앞으로 요구할 사항(미리 생각해 보세요)
+* 메인메뉴 클릭시 왼쪽에서 슬라이드 메뉴가 나오도록 해주세요.(3점)
+* 검색 버튼 클릭시 검색 팝업이 나오도록 해주세요.(2점)
+* 장바구니 클릭시 장바구니 팝업이 나오도록 해주세요.(2점)
 
-### `npm start`
+## 메인 영역
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 슬라이드 메뉴
+* 주석표시된 슬라이드 배너를 구현해주세요.(4점)
+    * 왼쪽에서 오른쪽으로 슬라이드되도록 해주세요.
+    * 일정 시간(5초)가 지나면 자동으로 슬라이드 되도록 해주세요.
+    * 무한 슬라이드를 구현해주세요.(슬라이드 마지막 > 처음으로)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 비주얼 메뉴
+* 각 클릭시 해당 페이지로 이동시켜 주세요.(1점)
+    * 페이지는 임시로 생성해 주시고 라우터를 사용해주세요.
 
-### `npm test`
+### 공간활용/옷장/리뷰 리스트
+* 각 데이터를 받아서 알맞게 구성해 주세요.(2점)
+* 데이터에 맞게 클립(NEW)를 구성해주세요.(1점)
+* 데이터가 없거나 오류가 나면 예외처리와 화면을 만들어 주세요.(2점)
+* 각 썸네일의 북마크 기능을 구현해주세요.(3점)
+    * 북마크의 체크 히스토리는 로컬 스토리지에 각 관리되도록 저장해주세요.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 오늘의 딜 리스트
+* 각 데이터를 받아서 알맞게 구성해 주세요.(4점)
+    * 퍼블리싱된 데이터 포멧에 맞게 함수를 따로 만들어 관리해주세요.
+* 썸네일 왼쪽 상단에 카운터 기능을 만들어주세요.(4점)
+    * 금일 24시 기준으로 만들어주세요.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 푸터 영역
+* 전화번호 클릭했을 때 전화가 되도록 구현해 주세요.
