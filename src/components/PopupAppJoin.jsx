@@ -1,13 +1,31 @@
 import React from "react";
+import { useState } from "react";
 import "./PopupAppJoin.scss";
 
 const PopupAppJoin = () => {
+  const [valiable, setValiable] = useState(false)
+  const MILLISECONDS_OF_A_DAY = 86400000;
+
+  function closePopup (e)  {
+    setValiable(true)
+
+  }
+
+  function openPopup () {
+    setValiable(false)
+
+  }
+
+  setTimeout(openPopup,MILLISECONDS_OF_A_DAY)
+
+
+
   return (
+
     <div
-      className="popupAppJoin"
+      className={valiable === true ? "popupAppJoin close"  : "popupAppJoin"}
       id="popupAppJoin"
-      style={{ display: "block" }}
-    >
+    > 
       <div className="popup">
         <div className="inner">
           <div className="info">
@@ -49,7 +67,7 @@ const PopupAppJoin = () => {
             <button type="button" className="btn-app">
               편리한 앱으로 보기
             </button>
-            <button type="button" className="btn-web">
+            <button onClick={closePopup} type="button" className="btn-web">
               모바일 웹으로 볼래요
             </button>
           </div>
