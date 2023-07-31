@@ -1,31 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./PopupAppJoin.scss";
 
+
 const PopupAppJoin = () => {
-  const [valiable, setValiable] = useState(false)
-  const MILLISECONDS_OF_A_DAY = 86400000;
 
-  function closePopup (e)  {
-    setValiable(true)
+  const [isPopupShow, setPopupShow] = useState(true);
 
+  const closePopup = (expireDays) => {
+    let expire = new Date();
+    expire.setTime(expire.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    localStorage.setItem("popupNoShow", expire.getTime());
+  }
+  
+  const checkPopupClose = () => {
+    const expireDay = localStorage.getItem("popupNoShow");
+    let today = new Date();
+  
+    if(today.getTime() > expireDay) { // 이렇게 하면 localStorage에 아무것도 저장되어 있지 않을 경우 undefined 거나 null 이므로 true를 반환한다.
+      return false;
+    } else {
+      return true;
+    }
   }
 
-  function openPopup () {
-    setValiable(false)
+  const closePopupToday = () => {
+    closePopup(1); // 하루 동안 표시 안 할 것임을 명시
+    setPopupShow(false); // 오늘 하루 안 보기 누름과 동시에 팝업 사라짐
+  };
 
-  }
+  useEffect(() => {
+    checkPopupClose() ? setPopupShow(false) : setPopupShow(true);
+    // 최초 컴포넌트가 마운트되었을 때, 팝업을 표시할 지 말지 조회
+  }, []);
 
-  setTimeout(openPopup,MILLISECONDS_OF_A_DAY)
+
+
 
 
 
   return (
 
     <div
-      className={valiable === true ? "popupAppJoin close"  : "popupAppJoin"}
+      className={isPopupShow === false ? "popupAppJoin close"  : "popupAppJoin"}
       id="popupAppJoin"
     > 
+
       <div className="popup">
         <div className="inner">
           <div className="info">
@@ -67,7 +87,7 @@ const PopupAppJoin = () => {
             <button type="button" className="btn-app">
               편리한 앱으로 보기
             </button>
-            <button onClick={closePopup} type="button" className="btn-web">
+            <button onClick={closePopupToday} type="button" className="btn-web">
               모바일 웹으로 볼래요
             </button>
           </div>
