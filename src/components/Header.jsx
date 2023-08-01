@@ -21,9 +21,10 @@ const manuArray = [
 const Header = () => {
   const [text, setText] = useState("홈");
 
-  function onClickClass(e) {
+  function onClickMenu(e) {
     setText(e.target.innerText);
   }
+
   return (
     <header className="header" id="header">
       <div className="home">
@@ -56,12 +57,11 @@ const Header = () => {
 
       <nav className="gnb">
         {/* 동적으로 UL(list)의 넓이를 정해주세요 */}
-
         <ul className="list" style={{ width: "620px" }}>
           {manuArray.map((item, idx) => {
             return (
-              <li key={idx} className={text === item ? "active" : null}>
-                <a onClick={onClickClass} href="#!">
+              <li className={text === item ? "active" : null} key={idx}>
+                <a onClick={onClickMenu} href="#!">
                   {item}
                 </a>
               </li>

@@ -2,27 +2,26 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./PopupAppJoin.scss";
 
-
 const PopupAppJoin = () => {
-
   const [isPopupShow, setPopupShow] = useState(true);
 
   const closePopup = (expireDays) => {
     let expire = new Date();
-    expire.setTime(expire.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    expire.setTime(expire.getTime() + expireDays * 24 * 60 * 60 * 1000);
     localStorage.setItem("popupNoShow", expire.getTime());
-  }
+  };
 
   const checkPopupClose = () => {
     const expireDay = localStorage.getItem("popupNoShow");
     let today = new Date();
 
-    if (today.getTime() > expireDay) { // 이렇게 하면 localStorage에 아무것도 저장되어 있지 않을 경우 undefined 거나 null 이므로 true를 반환한다.
+    if (today.getTime() > expireDay) {
+      // 이렇게 하면 localStorage에 아무것도 저장되어 있지 않을 경우 undefined 거나 null 이므로 true를 반환한다.
       return false;
     } else {
       return true;
     }
-  }
+  };
 
   const closePopupToday = () => {
     closePopup(1); // 하루 동안 표시 안 할 것임을 명시
@@ -34,16 +33,11 @@ const PopupAppJoin = () => {
     // 최초 컴포넌트가 마운트되었을 때, 팝업을 표시할 지 말지 조회
   }, []);
 
-
-
-
   return (
-
     <div
       className={isPopupShow === false ? "popupAppJoin close" : "popupAppJoin"}
       id="popupAppJoin"
     >
-
       <div className="popup">
         <div className="inner">
           <div className="info">
@@ -53,7 +47,7 @@ const PopupAppJoin = () => {
               height="100%"
               viewBox="0 0 20 20"
             >
-              <g fill="none" fill-rule="evenodd">
+              <g fill="none" fillRule="evenodd">
                 <path
                   fill="#35C5F0"
                   d="M16.41 0H3.59A3.59 3.59 0 0 0 0 3.59v12.82A3.59 3.59 0 0 0 3.59 20h12.82A3.59 3.59 0 0 0 20 16.41V3.59A3.59 3.59 0 0 0 16.41 0"
