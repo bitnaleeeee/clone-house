@@ -4,8 +4,26 @@ import logo from "../common/images/logo.png";
 import homeBtn from "../common/images/home-btn.png";
 import searchBtn from "../common/images/search-btn.png";
 import basketBtn from "../common/images/basket-btn.png";
+import { useState } from "react";
+
+const manuArray = [
+  "홈",
+  "추천",
+  "집들이",
+  "집사진",
+  "살림수납",
+  "홈스토랑",
+  "취미일상",
+  "3D인테리어",
+  "이벤트",
+];
 
 const Header = () => {
+  const [text, setText] = useState("홈");
+
+  function onClickClass(e) {
+    setText(e.target.innerText);
+  }
   return (
     <header className="header" id="header">
       <div className="home">
@@ -37,36 +55,18 @@ const Header = () => {
       </div>
 
       <nav className="gnb">
-
         {/* 동적으로 UL(list)의 넓이를 정해주세요 */}
-        <ul className="list" style={{width: '620px'}}>
-          <li className="active">
-            <a href="#!">홈</a>
-          </li>
-          <li>
-            <a href="#!">추천</a>
-          </li>
-          <li>
-            <a href="#!">집들이</a>
-          </li>
-          <li>
-            <a href="#!">집사진</a>
-          </li>
-          <li>
-            <a href="#!">살림수납</a>
-          </li>
-          <li>
-            <a href="#!">홈스토랑</a>
-          </li>
-          <li>
-            <a href="#!">취미일상</a>
-          </li>
-          <li>
-            <a href="#!">3D인테리어</a>
-          </li>
-          <li>
-            <a href="#!">이벤트</a>
-          </li>
+
+        <ul className="list" style={{ width: "620px" }}>
+          {manuArray.map((item, idx) => {
+            return (
+              <li key={idx} className={text === item ? "active" : null}>
+                <a onClick={onClickClass} href="#!">
+                  {item}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

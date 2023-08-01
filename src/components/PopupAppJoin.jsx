@@ -12,12 +12,12 @@ const PopupAppJoin = () => {
     expire.setTime(expire.getTime() + (expireDays * 24 * 60 * 60 * 1000));
     localStorage.setItem("popupNoShow", expire.getTime());
   }
-  
+
   const checkPopupClose = () => {
     const expireDay = localStorage.getItem("popupNoShow");
     let today = new Date();
-  
-    if(today.getTime() > expireDay) { // 이렇게 하면 localStorage에 아무것도 저장되어 있지 않을 경우 undefined 거나 null 이므로 true를 반환한다.
+
+    if (today.getTime() > expireDay) { // 이렇게 하면 localStorage에 아무것도 저장되어 있지 않을 경우 undefined 거나 null 이므로 true를 반환한다.
       return false;
     } else {
       return true;
@@ -37,14 +37,12 @@ const PopupAppJoin = () => {
 
 
 
-
-
   return (
 
     <div
-      className={isPopupShow === false ? "popupAppJoin close"  : "popupAppJoin"}
+      className={isPopupShow === false ? "popupAppJoin close" : "popupAppJoin"}
       id="popupAppJoin"
-    > 
+    >
 
       <div className="popup">
         <div className="inner">
