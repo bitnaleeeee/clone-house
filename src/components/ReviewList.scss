@@ -1,0 +1,48 @@
+.review-list {
+  .list {
+    margin-top: 20px;
+    & > li {
+      margin-top: 15px;
+      .img {
+        float: left;
+        overflow: hidden;
+        border-radius: 5px;
+        width: 25%;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .info {
+        float: left;
+        margin-top: 5px;
+        padding-left: 15px;
+        width: 75%;
+        box-sizing: border-box;
+        color: rgb(47, 52, 56);
+        .title {
+          display: block;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .text {
+          margin-top: 5px;
+          font-size: 14px;
+          line-height: 1.4;
+
+          // 말줄임
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
