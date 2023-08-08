@@ -2,11 +2,13 @@ import React from "react";
 import "./Line.scss";
 import { useEffect } from "react";
 import { useState } from "react";
+import fetchAPI from "../jsonAPI";
+
 const Line = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://json-server-suvg.vercel.app/houseThumbnailList`)
+    fetch(`${fetchAPI}/houseThumbnailList`)
       .then((response) => response.json())
       .then((result) => {
         setData(result);

@@ -2,12 +2,13 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./ReviewList.scss";
+import fetchAPI from "../jsonAPI";
 
 const ReviewList = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`https://json-server-suvg.vercel.app/houseReviewList`)
+    fetch(`${fetchAPI}/houseReviewList`)
       .then((response) => response.json())
       .then((result) => {
         setData(result);
