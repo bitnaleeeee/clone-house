@@ -1,51 +1,51 @@
 $mainClr: rgb(53, 197, 240);
 
 .footer {
-    margin: 30px 0 0;
-    padding: 30px 0 50px;
-    background-color: rgb(247, 249, 250);
-    color: rgb(47, 52, 56);
-    .inner {
-        padding: 0 15px;
-        margin: 0 auto;
-        max-width: 780px;
-        h3.title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .telephone {
-            margin-top: 20px;
-            font-size: 16px;
-            strong {
-                margin-right: 5px;
-                font-weight: bold;
-            }
-        }
-        p.text {
-            margin-top: 10px;
-            line-height: 1.4;
+  margin: 30px 0 0;
+  padding: 30px 0 50px;
+  background-color: rgb(247, 249, 250);
+  color: rgb(47, 52, 56);
+  .inner {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 780px;
+    h3.title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .telephone {
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+      strong {
+        margin-right: 5px;
+        font-weight: bold;
+      }
+    }
+    p.text {
+      margin-top: 10px;
+      line-height: 1.4;
+      font-size: 13px;
+      color: rgb(47, 52, 56);
+    }
+    .company-list {
+      margin-top: 20px;
+      border-top: 1px solid rgb(234, 237, 239);
+      padding-top: 20px;
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          line-height: 1.6;
+          a {
             font-size: 13px;
             color: rgb(47, 52, 56);
-        }
-        .company-list {
-            margin-top: 20px;
-            border-top: 1px solid rgb(234, 237, 239);
-            padding-top: 20px;
-            ul {
-                li {
-                    display: inline-block;
-                    margin-right: 10px;
-                    line-height: 1.6;
-                    a {
-                        font-size: 13px;
-                        color: rgb(47, 52, 56);
-                        strong {
-                            font-weight: bold;
-                        }
-                    }
-                }
+            strong {
+              font-weight: bold;
             }
+          }
         }
+      }
     }
-
+  }
 }
