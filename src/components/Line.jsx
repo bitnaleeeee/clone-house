@@ -31,7 +31,11 @@ const Line = () => {
                   <li key={idx}>
                     <a href="#!">
                       <div className="thumbnail">
-                        <span className="clip new">NEW</span>
+                        <span
+                          className={item.date > 20230725 ? "clip new" : null}
+                        >
+                          {item.date > 20230725 ? "NEW" : null}
+                        </span>
                         <img src={item.imgSrc} alt="" className="img" />{" "}
                         <div className="bookmark">
                           <input
@@ -71,6 +75,11 @@ const Line = () => {
                   <li key={idx}>
                     <a href="#!">
                       <div className="thumbnail">
+                        <span
+                          className={item.date > 20230725 ? "clip new" : null}
+                        >
+                          {item.date > 20230725 ? "NEW" : null}
+                        </span>
                         <img src={item.imgSrc} alt="" className="img" />
                         <div className="bookmark">
                           <input
