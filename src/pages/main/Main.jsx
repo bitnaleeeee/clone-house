@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import PopupAppJoin from "../../components/PopupAppJoin";
 import ReviewList from "../../components/ReviewList";
 import Line from "../../components/Line";
+import SimpleSlider from "../../components/SimpleSlider";
 
 import "./Main.scss";
 
@@ -355,6 +356,7 @@ const Main = () => {
         <ReviewList />
       </div>
       <Footer />
+      <SimpleSlider />
     </>
   );
 };
