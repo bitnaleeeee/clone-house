@@ -18,8 +18,33 @@ const SimpleSlider = () => {
   return (
     <>
       <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
+          <div className="inner">
+            {/* 슬라이드 구현해주세요 */}
+            <div className="slide-wrap">
+              <ul className="slide-inner">
+                <li>
+                  <a href="#!">
+                    <img
+                      src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/168989938361023939.png?w=480"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+              <span className="state">
+                <span className="current">1</span>
+                <span>/</span>
+                <span className="total">12</span>
+                <span>+</span>
+              </span>
+            </div>
+
+            <div className="visual-menu">
+              <ul className="list"></ul>
+            </div>
+          </div>
+
           <div>
             <h3>1</h3>
           </div>
