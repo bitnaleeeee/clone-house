@@ -1,7 +1,7 @@
 ## 각 데이터 URL
-썸네일리스트: https://json-server-suvg.vercel.app/houseThumbnailList
-오늘의딜: https://json-server-suvg.vercel.app/houseShopList
-시공리뷰: https://json-server-suvg.vercel.app/houseReviewList
+썸네일리스트: https://json-server-suvg.vercel.app/houseThumbnailList  
+오늘의딜: https://json-server-suvg.vercel.app/houseShopList  
+시공리뷰: https://json-server-suvg.vercel.app/houseReviewList  
 
 ## 공통 영역
 ### 앱 안내 팝업
