@@ -15,26 +15,7 @@ const Main = () => {
       <Header />
       <div className="main" id="main">
         <div className="inner">
-          {/* 슬라이드 구현해주세요 */}
-          <div className="slide-wrap">
-            <ul className="slide-inner">
-              <li>
-                <a href="#!">
-                  <img
-                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/168989938361023939.png?w=480"
-                    alt=""
-                  />
-                </a>
-              </li>
-            </ul>
-            <span className="state">
-              <span className="current">1</span>
-              <span>/</span>
-              <span className="total">12</span>
-              <span>+</span>
-            </span>
-          </div>
-
+          <SimpleSlider />
           <div className="visual-menu">
             <ul className="list">
               <li>
@@ -356,7 +337,6 @@ const Main = () => {
         <ReviewList />
       </div>
       <Footer />
-      <SimpleSlider />
     </>
   );
 };

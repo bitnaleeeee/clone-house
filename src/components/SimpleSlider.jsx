@@ -6,67 +6,120 @@ import "slick-carousel/slick/slick.css";
 const SimpleSlider = () => {
   const settings = {
     arrows: true,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, // 슬라이드를 자동으로 넘길지 여부
     autoplaySpeed: 5000, // 자동으로 넘길 시 시간 간격
+    // nextArrow: <NextArrow />, // 화살표 버튼을 커스텀해서 사용
+    // prevArrow: <PrevArrow />,
   };
 
   return (
     <>
       <div>
         <Slider {...settings}>
-          <div className="inner">
-            {/* 슬라이드 구현해주세요 */}
-            <div className="slide-wrap">
-              <ul className="slide-inner">
-                <li>
-                  <a href="#!">
-                    <img
-                      src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/168989938361023939.png?w=480"
-                      alt=""
-                    />
-                  </a>
-                </li>
-              </ul>
-              <span className="state">
-                <span className="current">1</span>
-                <span>/</span>
-                <span className="total">12</span>
-                <span>+</span>
-              </span>
-            </div>
-
-            <div className="visual-menu">
-              <ul className="list"></ul>
-            </div>
+          {/* 슬라이드 구현해주세요 */}
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169218506755503578.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div>
-            <h3>1</h3>
+          {/* 슬라이드 구현해주세요 */}
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169202061984463470.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <h3>2</h3>
+
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169218565564968581.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <h3>3</h3>
+
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169218574660752028.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <h3>4</h3>
+
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169202177679087019.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
+
+          <div className="slide-wrap">
+            <ul className="slide-inner">
+              <li>
+                <a href="#!">
+                  <img
+                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/169202186349352821.png?w=3840"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </Slider>
       </div>
     </>
   );
 };
+
+// const NextArrow = ({ onClick }) => {
+//   return (
+//     <button onClick={onClick} type="button" style={{ background: "grey" }}>
+//       다음
+//     </button>
+//   );
+// };
+
+// const PrevArrow = ({ onClick }) => {
+//   return (
+//     <button onClick={onClick} type="button" style={{ background: "grey" }}>
+//       이전
+//     </button>
+//   );
+// };
 
 export default SimpleSlider;

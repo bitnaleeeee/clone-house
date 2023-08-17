@@ -1,9 +1,11 @@
 ## 각 데이터 URL
+
 썸네일리스트: https://json-server-suvg.vercel.app/houseThumbnailList  
 오늘의딜: https://json-server-suvg.vercel.app/houseShopList  
-시공리뷰: https://json-server-suvg.vercel.app/houseReviewList  
+시공리뷰: https://json-server-suvg.vercel.app/houseReviewList
 
 ## 공통 영역
+
 ### 앱 안내 팝업
 
 - 앱 안내 팝업을 닫으면(모바일웹으로 볼게요) 24시간 뒤에 해당 팝업이 다시 나오도록 하고, 24시간 안에는 해당 팝업이 안나오도록 해주세요.(3점)
@@ -45,6 +47,7 @@
 - ~~북마크의 체크 히스토리는 로컬 스토리지에 각 관리되도록 저장해주세요.~~
 
 ### 오늘의 딜 리스트
+
 - 각 데이터를 받아서 알맞게 구성해 주세요.(4점)
   - 퍼블리싱된 데이터 포멧에 맞게 함수를 따로 만들어 관리해주세요.
   - 별점(star)는 100점 만점으로 데이터가 넘어옵니다. 5점 만점으로 바꿔주세요.
@@ -55,4 +58,5 @@
 - 데이터가 없는 경우도 예외처리를 해주세요.
 
 ## 푸터 영역
+
 - 전화번호 클릭했을 때 전화가 되도록 구현해 주세요.
