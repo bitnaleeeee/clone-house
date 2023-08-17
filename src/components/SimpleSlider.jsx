@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 
 const SimpleSlider = () => {
   const settings = {
-    arrows: true,
+    // arrows: true,
     dots: false,
     infinite: true,
     speed: 500,
@@ -13,8 +13,8 @@ const SimpleSlider = () => {
     slidesToScroll: 1,
     autoplay: true, // 슬라이드를 자동으로 넘길지 여부
     autoplaySpeed: 5000, // 자동으로 넘길 시 시간 간격
-    // nextArrow: <NextArrow />, // 화살표 버튼을 커스텀해서 사용
-    // prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
@@ -106,20 +106,40 @@ const SimpleSlider = () => {
   );
 };
 
-// const NextArrow = ({ onClick }) => {
-//   return (
-//     <button onClick={onClick} type="button" style={{ background: "grey" }}>
-//       다음
-//     </button>
-//   );
-// };
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        color: "rgba(0, 0, 0, 0)",
+        margin: "10px",
+        marginRight: "40px",
+        zIndex: "9999",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
-// const PrevArrow = ({ onClick }) => {
-//   return (
-//     <button onClick={onClick} type="button" style={{ background: "grey" }}>
-//       이전
-//     </button>
-//   );
-// };
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        color: "rgba(0, 0, 0, 0)",
+        margin: "10px",
+        marginLeft: "40px",
+        zIndex: "9999",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default SimpleSlider;
