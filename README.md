@@ -1,6 +1,5 @@
-
-## 배포 URL
-#### 배포된 애플리케이션은 여기에서 확인할 수 있습니다 [Clone House](https://clone-house.vercel.app/)
+# 개인 프로젝트
+## 배포 URL :  [Clone House](https://clone-house.vercel.app/)
 
 ## 구현된 기능들
 - 24시간 팝업: 하루 종일 활성화되는 동적 앱 팝업
