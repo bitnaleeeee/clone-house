@@ -14,6 +14,6 @@
 - 데이터 예외 처리: 데이터가 없는 경우 적절히 예외 처리를 합니다.
 - 푸터 영역 전화번호 클릭 시 전화 연결: 푸터에 있는 전화번호를 클릭하면 바로 전화를 걸 수 있습니다.
 ## 데이터 소스
-#### 썸네일 리스트: [썸네일 리스트 보기](https://json-server-suvg.vercel.app/houseThumbnailList  )
-#### 오늘의 딜: [오늘의 딜 보기](https://json-server-suvg.vercel.app/houseShopList  )
-#### 시공 리뷰: [시공 리뷰 보기](https://json-server-suvg.vercel.app/houseReviewList)
+- 썸네일 리스트: [썸네일 리스트 보기](https://json-server-suvg.vercel.app/houseThumbnailList  )
+- 오늘의 딜: [오늘의 딜 보기](https://json-server-suvg.vercel.app/houseShopList  )
+- 시공 리뷰: [시공 리뷰 보기](https://json-server-suvg.vercel.app/houseReviewList)
